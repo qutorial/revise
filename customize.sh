@@ -9,7 +9,7 @@ big=`echo $name | sed 's/[[:blank:]]//g'`
 small=`echo "$big"  | tr '[:upper:]' '[:lower:]'`
 
 files=( "package.json" "config/application.rb" "config/secrets.yml" "config/environments/production.rb" "config/cable.yml"\
-        "app/views/layouts/application.html.erb" )
+        "app/views/layouts/application.html.erb" "config/initializers/devise.rb" )
 
 for f in "${files[@]}"
 do
@@ -33,7 +33,6 @@ do
 	sed "s/SSrand5SS/$rand1/g" 2>&1 > ./tmp/output.txt
 
   mv ./tmp/output.txt "$f"
-  cat "$f"
   echo "----"
 
 done
