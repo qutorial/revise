@@ -38,3 +38,11 @@ do
 done
 
 
+#how many were not changed
+
+rest=`grep -irn -e "SSsmallSS" -e "SSbigSS" -e "SSrand" -e "SSdomain" -e "SSname" -e "SSpassscore" | wc -l
+
+if [[ $rest -ne 0 ]]; then
+  echo "Haven't changed some files! Use grep to find them!"
+  echo "Error!!!"
+fi
