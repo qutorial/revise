@@ -1,24 +1,36 @@
-# README
+# Revise - a skeleton rails app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a skeleton ruby on rails app.
 
-Things you may want to cover:
+It has devise and zxcvbn installed, e.g. it can log in and sign up users.
 
-* Ruby version
+Bootstrap is configured, as well as some tools for testing and for 
+heroku deployment.
 
-* System dependencies
+## Install
 
-* Configuration
+Clone, run customize.sh.
+Install: bundler install --without production
+Migrate database: rails db:migrate
 
-* Database creation
+## Deploying to heroku
 
-* Database initialization
+Just create a heroku app, add it to git remotes here, push.
 
-* How to run the test suite
+## Customizing tips
 
-* Services (job queues, cache servers, search engines, etc.)
+After you run customize.sh you still have a lot to do 
+to customize your app.
 
-* Deployment instructions
+Start from app/assets/stylesheets/* to change the way the app looks.
 
-* ...
+Review the user model and make sure the devise aspects match your needs.
+Configure devise further in config/initializers/devise.rb
+
+Proceed to views in app/views/static/* and app/layouts/application*
+
+
+## Disclaimer
+
+This code is provided as is, you are yourself responsible for
+using it.
