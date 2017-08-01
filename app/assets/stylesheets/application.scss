@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+$font-size-base: 20px;
+$line-height-base: 1.3;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'bootstrap/theme';
+
+table.table tr td, p, input, select, textarea, code, pre {
+  font-size: 22px;
+}
+
+p strong {
+ display: inline-block;
+ margin-top: 5px;
+ margin-bottom: 10px;
+}
+
+ul.nav {
+  font-size: 20px;
+}
+
+.alert-alert {
+  @extend .alert-warning;
+}
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+a.btn-primary {
+  color: white;
+}
+
+a.btn:hover {
+  color: white;
+}
+
+// Place all the styles related to the Vulnerabilities controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+table {
+  td, th {
+    padding-right: 2em;
+  }
+}
+
+div.actions {
+  margin-top: 2em;
+  padding: 2em;
+
+  .btn {
+     min-width: 8em;
+     margin-left: 2em; 
+     font-size: 120%;
+     margin-bottom: 2em;
+  }
+}
+
+
+
+strong {
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  font-weight: normal;
+  font-size: 110%;
+}
+
