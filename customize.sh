@@ -33,8 +33,6 @@ do
 	sed "s/SSrand5SS/$rand1/g" 2>&1 > ./tmp/output.txt
 
   mv ./tmp/output.txt "$f"
-  echo "----"
-
 done
 
 
