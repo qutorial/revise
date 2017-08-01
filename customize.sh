@@ -14,7 +14,8 @@ files=( "package.json" )
 for f in "${files[@]}"
 do
   echo Preparing $f
-  sed "s/SSsmallSS/$small/g" $f | sed "s/SSbigSS/$big/g" > $f
+  sed "s/SSsmallSS/$small/g" $f | sed "s/SSbigSS/$big/g" > tmp/output.txt
+  mv tmp/output.txt $f
 done
 
 
