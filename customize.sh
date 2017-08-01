@@ -2,11 +2,12 @@
 
 
 read -p "Please, give your app a name, e.g. Apple Pie: " name
+read -p "Potential domain name, e.g. yourapp.com: " domain
 
 big=`echo $name | sed 's/[[:blank:]]//g'`
 small=`echo "$big"  | tr '[:upper:]' '[:lower:]'`
 
-files=( "package.json" "config/application.rb" )
+files=( "package.json" "config/application.rb" "config/secrets.yml" "config/environments/production.rb" "config/cable.yml" )
 
 for f in "${files[@]}"
 do
@@ -21,6 +22,7 @@ do
   sed "s/SSsmallSS/$small/g" "$f" |\
 	sed "s/SSbigSS/$big/g" |\
 	sed "s/SSnameSS/$name/g" |\
+	sed "s/SSdomainSS/$domain/g" |\
 	sed "s/SSrand1SS/$rand5/g" |\
 	sed "s/SSrand2SS/$rand4/g" |\
 	sed "s/SSrand3SS/$rand3/g" |\
