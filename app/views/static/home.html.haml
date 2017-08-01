@@ -3,10 +3,10 @@
     %div.container
       - if ! user_signed_in?
         %h1
-          Welcome to app
+          Welcome to SSnameSS
         %p
           %em
-            The app greetz you.
+            Some greeting here
       - else
         %p
           = "Welcome, #{current_user.name.split(' ')[0]}!" 

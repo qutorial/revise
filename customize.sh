@@ -9,7 +9,8 @@ big=`echo $name | sed 's/[[:blank:]]//g'`
 small=`echo "$big"  | tr '[:upper:]' '[:lower:]'`
 
 files=( "package.json" "config/application.rb" "config/secrets.yml" "config/environments/production.rb" "config/cable.yml"\
-        "app/views/layouts/application.html.erb" "config/initializers/devise.rb" )
+        "app/views/layouts/application.html.erb" "config/initializers/devise.rb" "app/views/static/home.html.haml"\
+       )
 
 for f in "${files[@]}"
 do
