@@ -6,11 +6,11 @@ read -p "Please, give your app a name, e.g. Apple Pie: " name
 big=`echo $name | sed 's/[[:blank:]]//g'`
 small=`echo "$big"  | tr '[:upper:]' '[:lower:]'`
 
-files=( "package.json" )
+files=( "package.json" "config/application.rb" )
 
 for f in "${files[@]}"
 do
-  echo Preparing $f
+  echo Changing: $f
 
   rand1=`hexdump -n 64 -e '4/4 "%08X" 1 ""' /dev/urandom`
   rand2=`hexdump -n 64 -e '4/4 "%08X" 1 ""' /dev/urandom`
@@ -29,7 +29,7 @@ do
 
   mv ./tmp/output.txt "$f"
   cat "$f"
-
+  echo "----"
 
 done
 
