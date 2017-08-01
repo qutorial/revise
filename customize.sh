@@ -7,7 +7,8 @@ read -p "Potential domain name, e.g. yourapp.com: " domain
 big=`echo $name | sed 's/[[:blank:]]//g'`
 small=`echo "$big"  | tr '[:upper:]' '[:lower:]'`
 
-files=( "package.json" "config/application.rb" "config/secrets.yml" "config/environments/production.rb" "config/cable.yml" )
+files=( "package.json" "config/application.rb" "config/secrets.yml" "config/environments/production.rb" "config/cable.yml"\
+        "app/views/layouts/application.html.erb" )
 
 for f in "${files[@]}"
 do
