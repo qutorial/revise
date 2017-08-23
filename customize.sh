@@ -7,6 +7,8 @@ read -p "Devise password score 1-6: " passscore
 
 big=`echo $name | sed 's/[[:blank:]]//g'`
 small=`echo "$big"  | tr '[:upper:]' '[:lower:]'`
+capital="$(tr '[:lower:]' '[:upper:]' <<< ${small:0:1})${small:1}"
+
 
 files=( "package.json" "config/application.rb" "config/secrets.yml" "config/environments/production.rb" "config/cable.yml"\
         "app/views/layouts/application.html.erb" "config/initializers/devise.rb" "app/views/static/home.html.haml"\
@@ -24,6 +26,7 @@ do
 
   sed "s/SSsmallSS/$small/g" "$f" |\
 	sed "s/SSbigSS/$big/g" |\
+	sed "s/SScaptialSS/$capital/g" |\
 	sed "s/SSnameSS/$name/g" |\
 	sed "s/SSdomainSS/$domain/g" |\
 	sed "s/SSpassscoreSS/$passscore/g" |\
