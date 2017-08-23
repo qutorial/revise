@@ -17,6 +17,8 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
+  <hr>
+  <h3>Changing password</h3>
   <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off", class: 'form-control'  %>
@@ -31,6 +33,8 @@
     <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'  %>
   </div>
 
+  <hr>
+  <h3>Confirm that you are you, please:</h3>
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off", class: 'form-control'  %>
