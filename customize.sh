@@ -26,7 +26,7 @@ do
 
   sed "s/SSsmallSS/$small/g" "$f" |\
 	sed "s/SSbigSS/$big/g" |\
-	sed "s/SScaptialSS/$capital/g" |\
+	sed "s/SScapitalSS/$capital/g" |\
 	sed "s/SSnameSS/$name/g" |\
 	sed "s/SSdomainSS/$domain/g" |\
 	sed "s/SSpassscoreSS/$passscore/g" |\
